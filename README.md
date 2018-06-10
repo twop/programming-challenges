@@ -2,7 +2,7 @@
 collections of my solutions to typical interview challenges
 
 ## Disclaimer: I disapprove them being used for interviews
-I do believe that these questions is damaging the industry. Still if you want to be relevant on the market this is one of the few things that helps to get hired.
+I do believe that these questions are damaging the industry. Still if you want to be relevant on the market this is one of the few things that helps to get hired.
 
 So to have some fun in the process I decided to try to solve them in a functional way using typescript (sometimes other languages):
 
