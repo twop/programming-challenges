@@ -1,0 +1,15 @@
+{
+  "name": "programming-challenges",
+  "version": "1.0.0",
+  "description": "answers to common interview questions",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node": "^6.0.5",
+    "typescript": "^2.9.1"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    // "lib": ["es2018", "es2015", "es2015.core", "es2016", "es2017"],
+    "module": "es6",
+    "target": "es6",
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "sourceMap": true
+  }
+}
