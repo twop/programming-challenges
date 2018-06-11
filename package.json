@@ -2,11 +2,10 @@
   "name": "programming-challenges",
   "version": "1.0.0",
   "description": "answers to common interview questions",
-  "main": "index.js",
+  "author": "Simon Korzunov",
   "scripts": {
-    "test": "test"
+    "build": "tsc -w"
   },
-  "author": "",
   "license": "MIT",
   "dependencies": {
     "ts-node": "^6.0.5",
