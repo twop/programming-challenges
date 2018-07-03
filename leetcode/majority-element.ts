@@ -14,21 +14,16 @@
 // Input: [2,2,1,1,1,2,2]
 // Output: 2
 
-type RunningVal = {
-  count: number;
-  candidate: number;
-};
-
 const majorityElementFunc = (nums: number[]): number =>
-  nums.reduce<RunningVal>(
-    ({ count, candidate }, val) =>
+  nums.reduce<[number, number]>(
+    ([count, candidate], val) =>
       count === 0
-        ? { count: 1, candidate: val }
+        ? [1, val]
         : val === candidate
-          ? { count: count + 1, candidate }
-          : { count: count - 1, candidate },
-    { count: 0, candidate: 0 }
-  ).candidate;
+          ? [count + 1, candidate]
+          : [count - 1, candidate],
+    [0, 0]
+  )[1];
 
 const majorityElement = (nums: number[]) => {
   let count = 1;
