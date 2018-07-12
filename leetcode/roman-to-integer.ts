@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/integer-to-roman/description/
+// https://leetcode.com/problems/roman-to-integer/description/
 
 // Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M.
 
@@ -19,54 +19,43 @@
 //     X can be placed before L (50) and C (100) to make 40 and 90.
 //     C can be placed before D (500) and M (1000) to make 400 and 900.
 
-// Given an integer, convert it to a roman numeral. Input is guaranteed to be within the range from 1 to 3999.
+// Given a roman numeral, convert it to an integer. Input is guaranteed to be within the range from 1 to 3999.
 
 // Example 1:
 
-// Input: 3
-// Output: "III"
+// Input: "III"
+// Output: 3
 
-namespace int_To_Roman {
+namespace str_to_rome {
   type RomeNum = [string, number];
-
   const nums: RomeNum[] = [
-    ["M", 1000],
-    ["D", 500],
-    ["C", 100],
-    ["L", 50],
-    ["X", 10],
+    ["I", 1],
     ["V", 5],
-    ["I", 1]
+    ["X", 10],
+    ["L", 50],
+    ["C", 100],
+    ["D", 500],
+    ["M", 1000]
   ];
 
-  const specialCases: RomeNum[] = [
-    ["IV", 4],
-    ["IX", 9],
-    ["XL", 40],
-    ["XC", 90],
-    ["CD", 400],
-    ["CM", 900]
-  ];
+  const map: { [key: string]: number } = nums.reduce(
+    (m, [rome, val]) => ({ ...m, [rome]: val }),
+    {}
+  );
 
-  const merged = [...nums, ...specialCases].sort(([_, a], [__, b]) => b - a);
+  const romanToInt = (s: string) =>
+    s.split("").reduce(
+      ({ sum, prev }, char) => {
+        const val = map[char] || 0;
+        return { sum: sum - (val > prev ? 2 * prev : 0) + val, prev: val };
+      },
+      { sum: 0, prev: Number.MAX_VALUE }
+    ).sum;
 
-  ` 
-Input: 3
-Output: "III"
-
-[3,""] -> -1 -> [2,"I"] ->  -1 -> [1, "III"] -> -1 -> [0, 'III']
-`;
-
-  // [3, ''] -> [2, 'I'] ...
-  const intToRoman = (n: number, curStr = ""): string => {
-    const res = merged.find(([_, val]) => n >= val);
-    return res ? intToRoman(n - res[1], curStr + res[0]) : curStr;
-  };
-
-  const testNum = ([num, expected]: [number, string]) =>
+  const testNum = ([num, str]: [number, string]) =>
     console.log(
-      `${num} -> ${expected} = ${
-        intToRoman(num) === expected ? "ok" : "false : " + intToRoman(num)
+      `${str} -> ${num} = ${
+        romanToInt(str) === num ? "ok" : "false : " + romanToInt(str).toString()
       }`
     );
 
