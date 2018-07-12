@@ -58,15 +58,8 @@ Output: "III"
 
 // [3, ''] -> [2, 'I'] ...
 const intToRoman = (n: number, curStr = ""): string => {
-  if (n <= 0) return curStr;
-
-  for (const [rome, val] of merged) {
-    if (n >= val) {
-      return intToRoman(n - val, curStr + rome);
-    }
-  }
-
-  return curStr;
+  const res = merged.find(([_, val]) => n >= val);
+  return res ? intToRoman(n - res[1], curStr + res[0]) : curStr;
 };
 
 const testNum = ([num, expected]: [number, string]) =>
