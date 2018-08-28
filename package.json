@@ -8,7 +8,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "ts-node": "^6.0.5",
-    "typescript": "^2.9.1"
+    "ts-node": "^7.0.1",
+    "typescript": "^3.0.1"
   }
 }
