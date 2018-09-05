@@ -1,6 +1,6 @@
 // given a table of conversions (like EUR <-> USD 1.2, note it does work both ways) fill a new table with requested conversions EUR -> USD
 
-namespace CurrrencyConversion {
+namespace CurrencyConversion {
   type ConvRow = [string, string, number];
   type Query = [string, string];
 

@@ -8,7 +8,10 @@
     "**/*.js.map": true
     // "**/*.js": true
   },
-  "cSpell.words": ["ctci"],
+  "cSpell.words": [
+    "Conv",
+    "ctci"
+  ],
   "editor.formatOnSave": true,
   "editor.tabSize": 2
 }
