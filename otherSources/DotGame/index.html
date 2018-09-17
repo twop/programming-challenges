@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dot Game</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+
+<body>
+  <script src="/index.js"></script>
+
+  <header>
+    <section class="title">
+      <h1>Dot Game</h1>
+    </section>
+    <div class="controls">
+      <div class="speedBlock">
+        <span class="speedSliderLabel">
+          Speed:
+          <span id="speedVal" class="val">100500</span>
+        </span>
+        <input id="speedSlider" class="speedSlider" type="range" />
+      </div>
+      <div class="scoreBlock">
+        <span class="scoreLabel">
+          Score:
+          <span id="scoreVal" class="val">0</span>
+        </span>
+      </div>
+      <div class="resetBlock">
+        <button id="resetBtn">
+          Again?
+        </button>
+      </div>
+    </div>
+  </header>
+  <div id="playground" class="playground">
+    <canvas id="canvas"></canvas>
+
+  </div>
+
+</body>
+
+</html>

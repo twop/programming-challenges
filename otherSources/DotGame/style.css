@@ -1,0 +1,107 @@
+html {
+  height: 100%;
+  padding: 5px;
+}
+
+body {
+  font-family: "Luckiest Guy", Bold;
+  font-size: 20px;
+  margin: auto;
+  color: white;
+  width: 800px;
+  height: 800px;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  border: 1px aquamarine groove;
+  border-radius: 5px;
+}
+
+.playground {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+}
+
+.title h1 {
+  font-size: 36px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.controls {
+  margin-right: 10px;
+  margin-left: 10px;
+  display: flex;
+  height: 60px;
+}
+
+.speedBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+.resetBlock {
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.resetBlock button {
+  height: 46px;
+  font-size: 20px;
+  color: white;
+  background-color: inherit;
+  border-style: groove;
+  border-width: 1px;
+  border-color: gray;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.resetBlock button:hover {
+  border-color: aquamarine;
+}
+
+.scoreBlock {
+  font-size: 28px;
+  display: flex;
+  align-items: flex-end;
+  flex: 1;
+  justify-content: center;
+}
+
+.val {
+  color: aquamarine;
+}
+
+.speedSliderLabel {
+  margin-left: 8px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.speedSlider {
+  background-color: black;
+}
+
+@media only screen and (max-width: 800px) {
+  body {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  body {
+    height: 100%;
+  }
+}
